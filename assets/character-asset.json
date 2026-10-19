@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "enabled": true,
+  "profile": "bust",
+  "file": "recorder-reference-local-v1.glb",
+  "normalization": {
+    "upAxis": "+Y",
+    "frontAxis": "+Z",
+    "targetHeightMeters": 1.25,
+    "yawDegrees": 0,
+    "centerXZ": true,
+    "floorY": 0
+  },
+  "provenance": {
+    "title": "归巢协议 · 影像记录者",
+    "author": "黄进鸿 · AI 协作角色设计；Hunyuan3D-2mini 本地三维重建；AI 补充视角与材质制作",
+    "source": {
+      "type": "service-generated",
+      "name": "Tencent Hunyuan3D-2mini 本地推理，真实网格与三视角材质投影",
+      "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
+      "sourceCommit": "f8db63096c8282cb27354314d896feba5ba6ff8a",
+      "modelRevision": "f90a0f7df7d5e6f71109cf333f6a95a0ae3194a6",
+      "materialWorkflow": "depth-visible-reference-projection",
+      "supplementaryViews": "背面与左侧由 AI 补充设计，非原图可观察视角",
+      "assetSHA256": "3eca0c87bc15606211070550e80f20b62391a57406cc0689ca2ad655b06855fc",
+      "noticeFile": "recorder-asset-notice.txt",
+      "originalAssetSHA256": "b73a50e70c0fd71cad0c73ae28b7bd49aa51837392621a8610596d4d089ff77f",
+      "metadataSanitization": "仅移除两条本机参考图绝对路径；其他来源、模型版本、许可和元数据不变，几何、材质与全部 BIN 数据原样保留。"
+    },
+    "license": "角色参考为原创 AI 协作设计；生成工具遵循 Tencent Hunyuan 3D 2.0 Community License Agreement，见 hunyuan3d-community-license.txt 与 recorder-asset-notice.txt。未重新授权角色素材。",
+    "productionNote": "本地预览候选。真实有厚度的半身网格，正面采用已确认角色图，背面与左侧为补充设计。参考图明暗仍保留在底色内；没有独立 normal、AO 或 metallic-roughness 贴图。装甲硬边、独立板层与小型机构仍未达到原图精度，不标称手工建模或一比一还原。",
+    "referenceMatch": "in-review"
+  }
+}

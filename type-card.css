@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* One character-card display family, with its genuine source glyphs and slant.
+   UI copy and technical data retain their normal, locally hosted typefaces. */
+@font-face {
+  font-family: ArchiveCard;
+  src: url("assets/fonts/card-2026/archive-card.woff2") format("woff2");
+  font-weight: 400;
+  font-style: oblique 8deg;
+  font-display: swap;
+}
+:root {
+  --font-display: ArchiveCard, ArchiveSans, "Microsoft YaHei", "PingFang SC", sans-serif;
+  --accent: #d9f870;
+  --lime: var(--accent);
+  /* Compatibility tokens for the preceding animation layers. */
+  --violet: var(--accent);
+  --violet-ink: #101114;
+  --violet-paper: #fff;
+}
+.hero-headline, .world-title h2, .story-copy h2, .sequence-on .story-copy h2,
+.archive-heading, .works .project-side h3, .project-row-title, .about .about-copy h2,
+#world-explorer .explorer-heading h2, .contact h2, #site-menu nav a,
+.inspection-copy h2, .case-heading h4,
+#world-explorer .explorer-story h3, #world-explorer .explorer-object h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: oblique 8deg;
+  font-synthesis: none;
+  letter-spacing: .02em;
+  -webkit-text-stroke: 0;
+}
+/* Explicit inherited words override earlier, more specific split treatments. */
+.hero-headline > span, .hero-headline > span:nth-child(2),
+.hero-headline em, .hero-headline > span:nth-child(3) em,
+.world-title h2 span, .world-title h2 .world-outline,
+.works .archive-heading span, .works .archive-heading .archive-word,
+.about .about-copy h2 span, .about .about-statement,
+#world-explorer .explorer-heading h2 span, #world-explorer .explorer-heading-break,
+.contact h2 span, .contact .contact-invitation, #site-menu nav a .menu-word {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  -webkit-text-stroke: 0;
+}
+.hero-headline, .world-title h2, .contact h2, .inspection-copy h2 { color: #fff; }
+.story-copy h2, .sequence-on .story-copy h2, .archive-heading, .about .about-copy h2,
+#world-explorer .explorer-heading h2 { color: #101114; }
+.hero-headline { line-height: 1.12; }
+.hero-headline > span:nth-child(2), .hero-headline > span:nth-child(3) { left: var(--content-left); }
+.hero-headline em { font-size: 1em; }
+.world-title h2 { line-height: 1.12; }
+.world-title h2 .world-outline { margin-left: 0; }
+.story-copy h2, .sequence-on .story-copy h2 { line-height: 1.18; }
+.works .archive-heading { line-height: 1.12; }
+.about .about-copy h2 { line-height: 1.24; }
+#world-explorer .explorer-heading h2 { line-height: 1.18; }
+#world-explorer .explorer-heading h2::before { display: none; }
+#world-explorer .explorer-heading-break { margin-left: 0; }
+.contact h2 { line-height: 1.18; }
+.contact .contact-invitation { margin-left: 0; }
+/* The same small registration mark belongs to every principal title.
+   It is UI geometry, not an image or a decorative second font. */
+.hero-headline > span:last-child::after,
+.world-title h2::after, .story-copy h2::after,
+.works .archive-heading::after, .about .about-copy h2::after,
+#world-explorer .explorer-heading h2::after, .contact h2::after,
+.inspection-copy h2::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 18px;
+  margin-top: 18px;
+  background:
+    linear-gradient(114deg, transparent 26%, var(--accent) 27% 72%, transparent 73%) left / 48% 100% no-repeat,
+    linear-gradient(114deg, transparent 26%, var(--accent) 27% 72%, transparent 73%) right / 48% 100% no-repeat;
+  pointer-events: none;
+}
+.hero-action { color: #fff; }
+.world-copy .button { border-color: #ffffff9c; background: #10111466; }
+.world-copy .button:hover { color: #101114; background: var(--accent); border-color: var(--accent); }
+.works .project-side .text-link svg { color: #101114; }
+.about { background: #fff; }
+.about .experience, .about .experience:last-child { border-color: #10111430; }
+.about .experience-date, .about .experience > p:last-child, .about .skills p { color: #5c606b; }
+.about .skills > div + div { border-color: #10111420; }
+.about .about-art { box-shadow: 0 20px 40px #10111420; }
+body[data-chapter="about"] .hud-header { background: #fff; color: #101114; }
+.contact { background: #101114; }
+.contact::after { background: none; }
+.contact .contact-email, .contact .site-footer { color: #ffffffd9; }
+.cine-mark-contact { color: #bfc0c8; }
+.text-project > summary:hover, .concept-process > summary:hover { background: #10111405; }
+body[data-theme="light"] .character-open span { color: #101114; }
+body[data-theme="light"] .scene-toggle[aria-pressed="true"] { color: #101114; }
+body[data-theme="light"] .hud-header nav a::after { background: #101114; }
+.works :focus-visible, .about :focus-visible,
+body[data-theme="light"] .hud :focus-visible { outline-color: #101114; }
+#world-explorer .explorer-viewer :focus-visible { outline-color: var(--accent); }
+#site-menu nav a > .menu-index { font-family: var(--font-data); font-style: normal; font-weight: 400; }
+#site-menu nav a:hover > .menu-index,
+#site-menu nav a[aria-current] > .menu-index { color: inherit; }
+#site-menu .menu-index.is-decoding::after { color: var(--accent); }
+#site-menu nav a[aria-current] .menu-index.is-decoding::after,
+#site-menu nav a:hover .menu-index.is-decoding::after { color: #101114; }
+#world-explorer .explorer-scene-tabs button[data-pending] { border-color: var(--accent); }
+#world-explorer .explorer-object-route { color: #ffffffcf; }
+.inspection-copy { scrollbar-color: #676b74 transparent; }
+.inspection-rail i { background: linear-gradient(transparent, var(--accent), transparent); }
+.inspection-kicker { color: #ffffffd9; border-left-color: var(--accent); }
+.inspection-features dt { color: #fff; }
+.hold-model-panel { background: #ffffff03; }
+.hold-model-panel::before { color: #ffffffbd; }
+#character-status { color: #ffffffbd; }
+.character-shell { background: #101114; }
+.character-controls button[aria-pressed="true"],
+.character-controls #character-auto[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); border-radius: 0; }
+.character-controls button:hover { color: #fff; background: #ffffff0f; }
+.character-atmosphere { --atmosphere-violet: 217,248,112; color: #ffffffa6; }
+.character-atmosphere__halo, .character-atmosphere__platform { background: none; }
+.character-atmosphere__grid {
+  background-image: linear-gradient(#ffffff07 1px, transparent 1px), linear-gradient(90deg, #ffffff07 1px, transparent 1px);
+}
+.character-atmosphere__code-column { color: #ffffff6b; }
+.character-atmosphere__diagram-lines { stroke: #ffffff33; }
+.character-atmosphere__platform i { box-shadow: none; }
+.character-atmosphere__identity > span, .character-atmosphere__index > span { color: #ffffffba; }
+.character-atmosphere__index small, .character-atmosphere__archive small,
+.character-atmosphere__metadata { color: #ffffff7a; }
+.character-atmosphere__callout { color: #ffffffb3; }
+.character-atmosphere__archive { color: #ffffff80; }
+.character-atmosphere__archive b { color: #ffffffa1; }
+#portfolio-cursor .scope-accent-arcs { stroke: var(--accent); }
+@media (min-width: 821px) {
+  /* Reserve space for the new title signature before either action or photo. */
+  .hero-action { bottom: 8.5svh; }
+  .sequence-on .story-art-wide { top: 56%; }
+  /* The details remain scrollable above the persistent model controls. */
+  .inspection-copy { bottom: 108px; max-height: none; }
+}
+@media (max-width: 820px) {
+  .hero-headline > span:nth-child(2), .hero-headline > span:nth-child(3) { left: var(--content-left); }
+  .world-title h2 .world-outline, #world-explorer .explorer-heading-break,
+  .contact .contact-invitation { margin-left: 0; }
+  .hero-headline > span:last-child::after,
+  .world-title h2::after, .story-copy h2::after,
+  .works .archive-heading::after, .about .about-copy h2::after,
+  #world-explorer .explorer-heading h2::after, .contact h2::after,
+  .inspection-copy h2::after { width: 30px; height: 14px; margin-top: 14px; }
+}
+@media (prefers-contrast: more) {
+  .hero-headline > span:nth-child(2), .world-title h2 .world-outline { color: inherit; -webkit-text-stroke: 0; }
+}

@@ -1,0 +1,23 @@
+/* Small motions use the existing palette and original scroll composition. */
+.character-open, .resume-link, .hero-action, .text-link, .button, .character-controls button {
+  transition: color .2s, background-color .2s, border-color .2s;
+}
+.character-open span, .resume-link svg, .hero-action svg, .text-link svg, .button svg {
+  transition: transform .38s cubic-bezier(.16,1,.3,1);
+}
+.character-open:hover span { transform:translate(2px,-2px); display:inline-block; }
+.resume-link:hover svg { transform:translate(2px,-2px); }
+.hero-action:hover svg, .text-link:hover svg, .button:hover svg { transform:translateX(5px); }
+.menu-toggle svg path { transition:transform .3s, opacity .3s; transform-origin:center; }
+.menu-toggle:hover svg path:last-child { transform:translateX(5px); }
+#site-menu nav a { transition:color .2s, background-color .2s; }
+#site-menu nav a span { transition:color .2s; }
+#site-menu nav a:hover span { color:var(--lime,#d9f870); }
+.text-project > summary, .concept-process > summary { transition:background-color .25s; }
+.text-project > summary:hover, .concept-process > summary:hover { background:rgba(167,155,237,.065); }
+.disclosure { transition:transform .42s cubic-bezier(.16,1,.3,1); }
+.ui-closing { pointer-events:none; }
+@media(prefers-reduced-motion:reduce) {
+  .character-open span, .resume-link svg, .hero-action svg, .text-link svg, .button svg,
+  .menu-toggle svg path, .disclosure { transition:none; transform:none !important; }
+}

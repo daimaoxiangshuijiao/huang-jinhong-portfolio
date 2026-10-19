@@ -1,0 +1,27 @@
+/* Locally subset and renamed SIL OFL typography. See assets/fonts/art-2026/manifest.json. */
+@font-face {
+  font-family: ArchiveSans;
+  src: url("assets/fonts/art-2026/archive-sans-sc.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: ArchiveGrotesk;
+  src: url("assets/fonts/art-2026/archive-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: ArchiveMono;
+  src: url("assets/fonts/art-2026/archive-mono.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-ui: ArchiveGrotesk, ArchiveSans, "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-display: ArchiveGrotesk, ArchiveSans, "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-data: ArchiveMono, ArchiveSans, "Microsoft YaHei", "PingFang SC", monospace;
+}

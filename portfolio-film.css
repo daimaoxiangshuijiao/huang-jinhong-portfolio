@@ -1,0 +1,25 @@
+/* A genuine film inside the existing open archive layout. */
+.film-project{margin:0 0 30px;padding:26px 0 10px;border-top:1px solid #10111438;scroll-margin-top:100px}
+.film-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px}
+.film-heading h4{margin:0;font-family:var(--font-display);font-weight:400;font-style:oblique 8deg;font-size:56px;line-height:1.2;font-synthesis:none;letter-spacing:.02em;color:#101114}
+.film-meta{display:flex;align-items:center;gap:24px;margin:0 0 6px;font:400 13px/1.8 var(--font-ui);color:#62666b}
+.film-meta time{font-family:var(--font-mono,ArchiveMono,monospace);font-size:12px;white-space:nowrap}
+.film-stage{position:relative;isolation:isolate;aspect-ratio:854/480;background:#101114;overflow:hidden}
+.film-video{display:block;width:100%;height:100%;aspect-ratio:854/480;object-fit:contain;background:#101114;scroll-margin-block:96px}
+.film-stage[data-film-state="idle"]{clip-path:polygon(0 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%)}
+.film-play{position:absolute;z-index:1;left:50%;top:50%;translate:-50% -50%;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:166px;min-height:62px;padding:16px 24px;border:0;background:#d9f870;color:#101114;font:500 15px/1.6 var(--font-ui);cursor:pointer;clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);transition:background .2s ease,scale .2s ease}
+.film-play svg{width:22px;height:22px;fill:currentColor}
+.film-play:hover{background:#e5ff93;scale:1.03}.film-play:active{scale:.97}
+.film-play:focus-visible{outline:3px solid #fff;outline-offset:6px;clip-path:none}
+.film-play[hidden],.film-actions [hidden]{display:none}
+.film-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:12px;color:#62666b;font:400 13px/1.8 var(--font-ui)}
+.film-footer p{margin:0}
+.film-actions{display:flex;align-items:center;gap:24px}
+.film-actions a,.film-actions button{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:44px;padding:5px 0;border:0;border-bottom:1px solid #10111480;background:transparent;color:#101114;font:400 13px/1.6 var(--font-ui);text-decoration:none;cursor:pointer}
+.film-actions svg{width:23px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4}
+.film-actions a:focus-visible,.film-actions button:focus-visible{outline:2px solid #101114;outline-offset:5px}
+.film-status{min-height:22px;margin:4px 0 0;color:#62666b;font:400 12px/1.8 var(--font-ui)}
+@media(max-width:700px){.film-project{padding-top:22px;margin-bottom:22px;scroll-margin-top:88px}.film-heading{gap:16px;margin-bottom:18px}.film-heading h4{font-size:38px}.film-meta{gap:12px;margin-bottom:2px;font-size:11px}.film-meta time{font-size:11px}.film-play{min-width:138px;min-height:52px;padding:12px 18px;font-size:13px;gap:10px}.film-play svg{width:20px;height:20px}.film-footer{align-items:flex-start;flex-direction:column;gap:4px;font-size:12px}.film-actions{width:100%;justify-content:space-between;gap:14px}.film-actions a,.film-actions button{font-size:12px}.film-video{scroll-margin-block:80px}}
+@media(prefers-reduced-motion:reduce){.film-play{transition:none}.film-play:hover,.film-play:active{scale:none}}
+/* Opaque backing under the mobile HUD border prevents a one-pixel text bleed. */
+@media(max-width:700px){body[data-theme="light"] .hud::before{height:calc(var(--inset) + 1px);background:linear-gradient(color-mix(in srgb,currentColor 48%,#fff),color-mix(in srgb,currentColor 48%,#fff)) center bottom/calc(100% - var(--inset) - var(--inset)) 1px no-repeat,#fff}}

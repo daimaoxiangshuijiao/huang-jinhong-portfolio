@@ -1,0 +1,17 @@
+归巢协议 / 自主概念项目 / AI 协作视觉探索
+
+目的：为黄进鸿的 AIGC 个人作品集建立原创角色与一致的视觉世界。
+当前交付：角色主视觉、港口环境概念、网站视觉设计。短片尚未制作。
+
+角色提示词：
+Original fictional sci-fi image archivist, young adult man with a visible Asian face, short graphite-silver hair, translucent lavender optical visor, charcoal technical jacket, sparse lime hardware, hand holding a camera-lens artifact. Mature cinematic stylized 3D illustration, clean materials, restrained lighting. Lavender background with a large white circular composition. No existing franchise character, no logos, no webpage text.
+
+环境提示词：
+Original futuristic harbor at lavender dawn, dark geometric harbor architecture, a circular megastructure on the right, reflective water and a small solitary figure on the foreground dock. Cinematic wide composition, restrained lime accents, stylized 3D concept art. Preserve clear foreground, middle ground and background. No franchise references, no interface text, no fake playback controls.
+
+检查清单：
+1. 角色的脸、发型、眼镜、服装、相机保持稳定。
+2. 材质、主色、光线与环境表达一致。
+3. 检查手部、相机结构、衣服连接和画面边缘。
+4. 独立保留原图和提示词，网页文字与交互通过 HTML 实现。
+5. 实际视频、分镜与性能实验完成后再补充对应结果。

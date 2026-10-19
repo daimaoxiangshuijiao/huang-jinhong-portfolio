@@ -1,0 +1,46 @@
+/* October motion increment: retain the approved type, palette and composition. */
+:root { --motion-settle: cubic-bezier(.16,1,.3,1); }
+/* JS interpolates the existing variables; a second CSS transition adds lag. */
+.cine-image-hover.cine-damped-hover img { transition: none; }
+.cine-magnetic.cine-damped-hover {
+  transition: color .22s, background .22s, border-color .22s, scale .22s var(--motion-settle);
+}
+.hero-action, .text-link, .button, .resume-link, .character-open,
+.explorer-toolbar button, .explorer-modes button, .explorer-landmark-list button {
+  transition: color .22s, background .22s, border-color .22s,
+    scale .22s var(--motion-settle), gap .28s var(--motion-settle);
+}
+:is(.hero-action, .text-link, .button, .resume-link, .character-open,
+  .explorer-toolbar button, .explorer-modes button, .explorer-landmark-list button):active:not(:disabled) {
+  scale: .985; transition-duration: .1s;
+}
+.hud-header nav a::after { transition: transform .28s var(--motion-settle); }
+.hud-header nav a:focus-visible::after { transform: scaleX(1); }
+.hero-action svg, .text-link svg, .button svg, .resume-link svg {
+  transition: transform .28s var(--motion-settle);
+}
+.hero-action:focus-visible svg { transform: translateX(8px); }
+.text-link:focus-visible { gap: 42px; }
+.button:focus-visible svg, .resume-link:focus-visible svg { transform: translateX(4px); }
+#works details[data-motion-state="opening"], #works details[data-motion-state="closing"] {
+  overflow-anchor: none;
+}
+#works details > summary .project-row-title { transition: translate .28s var(--motion-settle); }
+#works details > summary:focus-visible .project-row-title { translate: 4px 0; }
+#works details .disclosure::after { transition: transform .28s var(--motion-settle); }
+#works details[data-motion-state="closing"] .disclosure::after { transform: rotate(90deg); }
+@media (hover: hover) and (pointer: fine) {
+  #works details > summary:hover .project-row-title { translate: 4px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cine-image-hover.cine-damped-hover img, .cine-magnetic.cine-damped-hover,
+  .hero-action, .text-link, .button, .resume-link, .character-open,
+  .explorer-toolbar button, .explorer-modes button, .explorer-landmark-list button,
+  .hud-header nav a::after, .hero-action svg, .text-link svg, .button svg, .resume-link svg,
+  #works details > summary .project-row-title, #works details .disclosure::after {
+    transition: none;
+  }
+  :is(.hero-action, .text-link, .button, .resume-link, .character-open,
+    .explorer-toolbar button, .explorer-modes button, .explorer-landmark-list button):active:not(:disabled) { scale: 1; }
+  #works details > summary .project-row-title { translate: none; }
+}

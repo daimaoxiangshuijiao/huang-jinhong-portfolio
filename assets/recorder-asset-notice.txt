@@ -1,0 +1,20 @@
+归巢协议 · 影像记录者 — 本地三维展示候选
+
+角色概念：黄进鸿，AI 协作视觉设计。
+几何生成：本机运行 Tencent Hunyuan3D-2mini；没有上传简历或联系方式。
+前面材质：已确认角色图投影到真实三维网格。
+背面及左侧材质：以原角色及实际灰模对应视图为依据，AI 补充设计后投影到三维网格。
+这些补充视角不是原图中可观察到的结构，也不代表从单图精确还原。
+本资产没有独立的法线、AO 或金属粗糙度贴图；底色含参考图的明暗。
+建模精度仍有差距，尤其是装甲硬边、独立甲片厚度及小型机构。
+此候选用于本地作品集预览，不标称手工建模作品或一比一复刻。
+
+实际展示由黄进鸿的个人作品集提供，Tencent 不参与本网站，也不对本网站提供赞助或认可。
+生成代码与权重的许可为 Tencent Hunyuan 3D 2.0 Community License Agreement；
+许可全文随项目保存在 hunyuan3d-community-license.txt。本说明不重新授予角色素材权利。
+
+Tencent Hunyuan 3D 2.0 is licensed under the Tencent Hunyuan 3D 2.0 Community License Agreement, Copyright © 2025 Tencent. All Rights Reserved. The trademark rights of “Tencent Hunyuan” are owned by Tencent or its affiliate.
+
+Official sources:
+https://github.com/Tencent-Hunyuan/Hunyuan3D-2/tree/f8db63096c8282cb27354314d896feba5ba6ff8a
+https://huggingface.co/tencent/Hunyuan3D-2mini/tree/f90a0f7df7d5e6f71109cf333f6a95a0ae3194a6

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="黄进鸿的 AIGC 影像作品集：剧本与分镜、角色一致性、生成与剪辑、视频理解与质量判断，以及可直接使用的分镜工具。">
+  <meta name="theme-color" content="#101114">
+  <title>黄进鸿 · AIGC 创作档案</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sequence.css">
+  <link rel="stylesheet" href="interaction.css">
+  <link rel="stylesheet" href="scope-cursor.css">
+  <link rel="stylesheet" href="character-atmosphere.css">
+  <link rel="stylesheet" href="interface-motion.css">
+  <link rel="stylesheet" href="cinematic-interface.css">
+  <link rel="stylesheet" href="cinematic-navigation.css">
+  <link rel="stylesheet" href="world-flight.css">
+  <link rel="stylesheet" href="world-explorer.css">
+  <link rel="stylesheet" href="refinement-ui.css">
+  <link rel="stylesheet" href="art-fonts.css">
+  <link rel="stylesheet" href="art-direction.css">
+  <link rel="stylesheet" href="art-content.css">
+  <link rel="stylesheet" href="art-expressive.css">
+  <link rel="stylesheet" href="art-expressive-content.css">
+  <link rel="stylesheet" href="type-card.css">
+  <link rel="stylesheet" href="motion-polish.css">
+  <link rel="stylesheet" href="lab-entry.css">
+  <link rel="stylesheet" href="portfolio-covers.css">
+  <link rel="stylesheet" href="portfolio-ready.css">
+  <link rel="stylesheet" href="portfolio-film.css">
+  <link rel="preload" href="assets/hero-v2.webp" as="image">
+  <link rel="preload" href="assets/refinement-2026/port.webp" as="image" fetchpriority="low">
+  <link rel="preload" href="assets/fonts/art-2026/archive-sans-sc.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/art-2026/archive-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/card-2026/archive-card.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="scene-renderer.js" defer></script>
+  <script src="cinematic-interface.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="character-model.js" defer></script>
+  <script src="interaction.js" defer></script>
+  <script src="character-atmosphere.js" defer></script>
+  <script src="interface-motion.js" defer></script>
+  <script src="cinematic-navigation.js" defer></script>
+  <script src="world-flight.js" defer></script>
+  <script src="world-explorer.js" defer></script>
+  <script src="motion-polish.js" defer></script>
+  <script src="portfolio-ready.js" defer></script>
+  <script src="portfolio-film.js" defer></script>
+</head>
+<body data-theme="dark" data-chapter="top">
+  <a class="skip-link" href="#selected-work">跳到精选作品</a>
+  <div class="hud" aria-label="章节导航与画面控制">
+    <header class="site-header hud-header">
+      <button class="menu-toggle" id="menu-toggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="site-menu"><svg viewBox="0 0 32 24" aria-hidden="true"><path d="M2 7h28M2 17h20"/></svg></button>
+      <nav aria-label="主导航"><a href="#world">世界</a><a href="#works">作品</a><a href="lab/index.html">实验室</a><a href="#about">关于</a><a href="#contact">联系</a></nav>
+      <div class="header-tools"><button class="character-open" data-character-open aria-haspopup="dialog" aria-controls="character-dialog">角色档案<span aria-hidden="true">↗</span></button><a class="resume-link" href="assets/resume.html" target="_blank" rel="noopener">简历<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M4 4h12v12"/></svg></a></div>
+    </header>
+    <div class="hud-rail"><button id="scene-toggle" class="scene-toggle" aria-label="切换信号视图" aria-pressed="false"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3v10m0 14v10M3 20h10m14 0h10"/><circle cx="20" cy="20" r="8"/><circle class="signal-dot" cx="20" cy="20" r="2"/></svg></button><span id="chapter-count">01 / 05</span><div id="reading-progress" aria-hidden="true"></div></div>
+  </div>
+  <p id="scene-mode-live" class="sr-only" aria-live="polite"></p>
+  <dialog id="site-menu" aria-label="网站导航"><div class="menu-top"><span>黄进鸿</span><button id="menu-close" aria-label="关闭菜单"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 16 16M20 4 4 20"/></svg></button></div><nav aria-label="章节菜单"><a href="#top" aria-current="location"><span>01</span>序章</a><a href="#world"><span>02</span>世界</a><a href="#works"><span>03</span>作品</a><a href="#about"><span>04</span>关于</a><a href="#contact"><span>05</span>联系</a></nav><div class="menu-bottom"><a href="lab/index.html">进入实验室 ↗</a><a href="mailto:1481538526@qq.com">1481538526@qq.com</a><a href="assets/resume.html" target="_blank" rel="noopener">查看简历 ↗</a></div></dialog>
+  <main>
+    <div class="scroll-sequence" data-scroll-sequence>
+    <div class="sequence-stage" data-sequence-stage>
+    <section id="top" class="hero-route sequence-panel" data-sequence-panel="hero" data-chapter-section data-theme="dark" aria-labelledby="hero-heading">
+      <div class="hero-stage stage" data-hold-surface>
+        <figure class="hero-visual scene-visual" data-scene="hero"><img src="assets/hero-v2.webp" width="1536" height="1024" fetchpriority="high" alt="原创科幻影像记录者的电影感近景：银灰发色、透明紫色光学眼镜与机能服"><canvas data-scene-canvas aria-hidden="true"></canvas></figure>
+        <div class="hero-copy"><div class="hero-intro"><p class="hero-identity">黄进鸿 · AIGC 影像创作者</p><p class="hero-description">从剧本拆解、分镜设计，到画面生成与剪辑。</p></div><h1 id="hero-heading" class="hero-headline"><span>想象<em>。</em></span><span>生成<em>。</em></span><span>归档<em>。</em></span></h1><a class="hero-action" href="#selected-work" data-ready-quick>查看精选作品<svg viewBox="0 0 44 24" aria-hidden="true"><path d="M1 12h40M31 2l10 10-10 10"/></svg></a><a class="scroll-cue" href="#world">向下探索<svg viewBox="0 0 18 28" aria-hidden="true"><path d="M9 1v24M2 18l7 7 7-7"/></svg></a></div>
+        <div class="story-copy"><p class="eyebrow">原创角色 · 影像记录者</p><h2>保存记忆，<br>寻找归途。</h2><p>一个关于影像、记忆与归途的原创视觉世界。</p><a class="text-link" href="#world">进入世界 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div>
+        <figure class="story-art-small"><img src="assets/type-card-2026/character-light-v1.webp" width="1122" height="1402" alt="记录者手持相机的角色设定：自然肤色、银灰头发与深色机能服" loading="lazy"></figure>
+        <figure class="story-art-wide"><img src="assets/archive-v2.webp" width="1672" height="941" alt="记录者背对镜头，在未来港口寻找归途" loading="lazy"></figure>
+      </div>
+    </section>
+    <section id="world" class="world-route sequence-panel" data-sequence-panel="world" data-sequence-anchor=".52" data-chapter-section data-theme="dark" aria-labelledby="world-heading">
+      <div class="world-stage stage" data-hold-surface>
+        <figure class="world-visual scene-visual" data-scene="world"><img src="assets/refinement-2026/port.webp" width="1536" height="1024" alt="未来港口的全景：巨型环形桥梁、远方行星与水面上的琥珀色晨光" loading="eager"><canvas data-scene-canvas aria-hidden="true"></canvas>
+        <div class="world-title"><h2 id="world-heading"><span>归巢</span><br><span class="world-outline">协议</span></h2></div>
+        <div class="world-copy"><p class="eyebrow">自主概念项目 · 角色与视觉设定</p><p>一个关于影像、记忆与归途的原创视觉世界。</p><a class="button button-white" href="#concept-process" data-open-details="concept-process">查看创作过程 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a><a class="world-explorer-entry" href="#world-explorer">探索四个场景 ↗</a></div>
+        <div class="world-grid" aria-hidden="true"></div><svg class="world-orbit" viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="69"/><ellipse cx="90" cy="90" rx="28" ry="69"/><ellipse cx="90" cy="90" rx="52" ry="69"/><ellipse cx="90" cy="90" rx="69" ry="24"/><ellipse cx="90" cy="90" rx="69" ry="48"/><path d="M21 90h138M90 21v138"/><circle cx="141" cy="44" r="5"/></svg>
+        </figure>
+      </div>
+    </section>
+    <div id="archive-handoff" class="archive-handoff" aria-hidden="true" inert></div>
+    </div>
+    </div>
+    <section id="works" class="works content-section" data-chapter-section data-theme="light" aria-labelledby="works-heading">
+      <h2 id="works-heading" class="archive-heading" data-reveal><span>创作</span><span class="archive-word">档案</span></h2>
+      <article class="featured-project" data-reveal><figure class="project-art"><img src="assets/archive-v2.webp" width="1672" height="941" alt="《归巢协议》场景概念：记录者站在未来港口，凝望紫色晨光和巨型环桥" loading="lazy"></figure><div class="project-side"><figure class="project-portrait"><img src="assets/portrait-v2.webp" width="1254" height="1254" alt="《归巢协议》的原创角色肖像" loading="lazy"></figure><h3>归巢协议</h3><p>自主概念项目 · 角色与视觉设定</p><a class="text-link" href="#concept-process" data-open-details="concept-process">查看创作过程 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div></article>
+      <header id="selected-work" class="selected-work-intro" aria-labelledby="selected-work-heading"><h3 id="selected-work-heading">作品与方法</h3><p>个人视频作品、制作方法与可使用的分镜工具。</p></header>
+      <article id="film-moshiying" class="film-project" aria-labelledby="film-title">
+        <div class="film-heading"><h4 id="film-title">末世影</h4><p class="film-meta"><span>个人视频作品</span><time datetime="PT3M48S">03:48</time></p></div>
+        <div class="film-stage" data-film-state="idle">
+          <video id="film-video" class="film-video" width="854" height="480" preload="none" playsinline poster="assets/films/apocalypse/poster.webp" data-src="assets/films/apocalypse/film.mp4" aria-label="末世影，个人视频作品" aria-describedby="film-status"></video>
+          <button id="film-play" class="film-play" type="button" aria-controls="film-video" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg><span>播放短片</span></button>
+        </div>
+        <div class="film-footer"><p>黄进鸿 · 视频作品</p><div class="film-actions"><button id="film-reset" type="button" aria-controls="film-video" hidden>回到封面</button><a class="film-direct" href="assets/films/apocalypse/film.mp4" target="_blank" rel="noopener">单独打开视频<svg viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div></div>
+        <p id="film-status" class="film-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p><a href="assets/films/apocalypse/film.mp4">打开完整视频</a></p></noscript>
+      </article>
+      <details class="text-project" id="manga-case">
+        <summary><span class="row-number">01</span><span class="project-row-title">AI 漫剧制作</span><span class="project-row-description">工作经历 · 分镜、角色一致性与生成流程</span><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="case-content">
+          <div class="case-heading"><p class="case-status">工作经历 / 不鸣文化 / 2025.07—2025.12</p><h4>把剧本变成可交付的镜头。</h4></div>
+          <dl class="case-responsibility"><div><dt>我的职责</dt><dd>剧本拆解与竖屏分镜、角色和场景资产、画面生成与后期合成。</dd></div><div><dt>方法侧重</dt><dd>角色一致性、镜头衔接、生成队列与素材归档。</dd></div></dl>
+          <div class="process-grid">
+            <div><h5>先确定镜头</h5><p>将剧情拆成景别、动作、运镜与时长，把悬念前置，再用生成画面检验衔接与节奏。</p></div>
+            <div><h5>再控制资产</h5><p>用角色三视图、固定提示词和素材库保持识别特征，结合 Photoshop 修正面部与服饰细节。</p></div>
+            <div><h5>形成制作流程</h5><p>通过 ComfyUI 队列与 Python 批处理完成批量生成、素材命名和归档，再进行剪辑与音画合成。</p></div>
+          </div>
+          <p class="case-result">据个人简历：半年交付 3 部漫剧、40 分钟成片，包含 450+ 镜头。</p>
+          <div class="case-evidence"><p class="authorship-note">本案例依据个人简历整理，展示本人职责与制作方法。</p><a class="text-link" href="assets/resume.html" target="_blank" rel="noopener">查看完整经历 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div>
+        </div>
+      </details>
+<details class="text-project" id="evaluation-case">
+        <summary><span class="row-number">02</span><span class="project-row-title">视频描述与多模态评测</span><span class="project-row-description">工作经历 · 画面拆解、质量复核与规则校准</span><span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="case-content">
+          <div class="case-heading"><p class="case-status">工作经历 / 商汤科技 / 2026.01—2026.06</p><h4>把每一次判断，落回画面依据。</h4></div>
+          <dl class="case-responsibility"><div><dt>我的职责</dt><dd>AI 训练师：视频描述、标注质检、模型对比与小组质量校准。</dd></div><div><dt>方法侧重</dt><dd>以可观察的画面为依据，核对信息、时序与描述一致性。</dd></div></dl>
+          <div class="process-grid">
+            <div><h5>按事件描述</h5><p>从主体、动作、场景、景别、运镜与时序六个维度拆解视频，按事件发生的顺序编写描述。</p></div>
+            <div><h5>用画面复核</h5><p>逐帧检查信息遗漏、图文不一致和无依据描述，整理自检清单，对返修样本再次复核。</p></div>
+            <div><h5>让规则可复用</h5><p>通过独立试评与标杆案例校准判断，参与多维评分与模型对比，将高频问题整理为规则和分类反馈。</p></div>
+          </div>
+          <p class="case-result">据个人简历：独立交付 1,200 条视频描述，统筹 6 人小组的案例培训与质量抽检。</p>
+          <div class="case-evidence"><p class="authorship-note">本案例依据个人简历整理，展示职责与质量判断方法。</p><a class="text-link" href="assets/resume.html" target="_blank" rel="noopener">查看完整经历 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div>
+        </div>
+      </details>
+      <a class="portfolio-tool-row" href="lab/storyboard.html"><span class="row-number">03</span><span class="project-row-title">分镜导演台</span><span class="project-row-description">个人交互实验 · 镜头、字幕与动态预演</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+<details class="concept-process" id="concept-process">
+        <summary>角色设定与视觉开发<span class="disclosure" aria-hidden="true"></span></summary>
+        <div class="case-content">
+          <div class="case-heading"><p class="case-status">自主概念项目 / 视觉探索</p><h4>让角色与世界，拥有同一套视觉语言。</h4></div>
+          <div class="process-grid">
+            <div><span class="process-number">01</span><h5>角色</h5><p>一位保存影像记忆的记录者。银灰发色、透明光学眼镜、手持相机和机能服构成稳定的识别特征。</p></div>
+            <div><span class="process-number">02</span><h5>世界</h5><p>以未来港口作为“归途”的场景。几何建筑、晨光与水面反射形成空间层次，紫色与少量荧光绿连接角色和环境。</p></div>
+            <div><span class="process-number">03</span><h5>方法</h5><p>先确定角色与构图，再生成关键视觉，检查脸部、材质、相机与画面边缘，最后将独立图像接入网页。</p></div>
+          </div>
+          <p class="authorship-note">本组视觉由 AI 协作生成，用于个人 IP 与网站方向探索；目前展示角色和环境概念，短片尚未制作。</p>
+          <div class="case-links"><a href="assets/character.webp" target="_blank" rel="noopener">查看角色原图</a><a href="assets/refinement-2026/port.webp" target="_blank" rel="noopener">查看环境原图</a><a href="assets/immersive-prompts.txt" download>下载创作提示词</a><a href="assets/refinement-2026/prompts.json" download>下载场景优化提示词</a></div>
+        </div>
+      </details>
+      <section id="lab" class="lab-entry" aria-labelledby="lab-heading">
+        <header><div><h2 id="lab-heading">记录者实验室</h2><p>围绕镜头、形态与轨迹的三个交互实验。</p></div><a class="text-link" href="lab/index.html">进入实验室 <span aria-hidden="true">↗</span></a></header>
+        <div class="lab-entry-gallery"><a class="lab-entry-project lab-entry-feature" href="lab/storyboard.html"><div class="lab-entry-media portfolio-director-cover"><img class="director-cover-scene" src="assets/refinement-2026/relay.webp" width="1536" height="1024" loading="lazy" alt="出航分镜模板中的轨道中继站"><div class="director-cover-strip" aria-hidden="true"><img src="assets/portfolio-ready-2026/director-shot-01.webp" width="320" height="180" alt="" loading="lazy"><img src="assets/portfolio-ready-2026/director-shot-02.webp" width="320" height="180" alt="" loading="lazy"><img src="assets/portfolio-ready-2026/director-shot-03.webp" width="320" height="180" alt="" loading="lazy"><img src="assets/portfolio-ready-2026/director-shot-04.webp" width="320" height="180" alt="" loading="lazy"><img src="assets/portfolio-ready-2026/director-shot-05.webp" width="320" height="180" alt="" loading="lazy"><img src="assets/portfolio-ready-2026/director-shot-06.webp" width="320" height="180" alt="" loading="lazy"></div></div><div class="lab-entry-caption"><span class="lab-entry-number">01</span><h3>分镜导演台</h3><p>导入画面、编辑运镜与字幕，导出动态预演。</p><span class="lab-entry-arrow" aria-hidden="true">↗</span></div></a>
+        <a class="lab-entry-project" href="lab/core.html"><div class="lab-entry-media portfolio-core-cover"><img src="assets/portfolio-ready-2026/core-liquid.webp" width="640" height="532" loading="lazy" alt="液态银：真实闭合编结金属带"><img src="assets/portfolio-ready-2026/core-orbit.webp" width="640" height="532" loading="lazy" alt="轨道回声：四个实体环与中心核心"><img src="assets/portfolio-ready-2026/core-crystal.webp" width="640" height="532" loading="lazy" alt="晶化记忆：真实切面晶体"></div><div class="lab-entry-caption"><span class="lab-entry-number">02</span><h3>记忆核心</h3><p>调节三维形态、收藏作品，完成一张海报。</p><span class="lab-entry-arrow" aria-hidden="true">↗</span></div></a>
+        <a class="lab-entry-project" href="lab/orbit.html"><div class="lab-entry-media lab-entry-orbit"><img src="assets/lab/orbit-planet.webp" width="640" height="640" loading="lazy" alt="画圆挑战的银色行星与轨道"><span aria-hidden="true"></span></div><div class="lab-entry-caption"><span class="lab-entry-number">03</span><h3>跃迁航迹校准</h3><p>画一圈，看真实评分，回放并保存轨迹。</p><span class="lab-entry-arrow" aria-hidden="true">↗</span></div></a></div>
+        <p class="lab-entry-note">个人交互实验 · AI 辅助实现，支持实际操作与导出。</p>
+      </section>
+      <section id="world-explorer" data-exploration aria-labelledby="explorer-heading">
+        <noscript><h2 id="explorer-heading">继续探索这个世界。</h2><p>启用 JavaScript 后，可探索晨潮港口、轨道中继站、记忆档案室和夜航归途，点开地标并暂停航行。</p></noscript>
+      </section>
+    </section>
+    <section id="about" class="about content-section" data-chapter-section data-theme="light" aria-labelledby="about-heading">
+      <div class="about-top"><div class="about-copy" data-reveal><h2 id="about-heading"><span>用画面表达，</span><br><span class="about-statement">用流程解决问题<span class="violet-period">。</span></span></h2><p class="about-focus">我关注 AIGC 影像制作与生成工作流：把剧本拆成镜头，让角色与画面保持一致，再通过剪辑与质量复核完成交付。</p><div class="experience-list"><div class="experience"><p class="experience-date">2025.07 — 2025.12</p><h3><a href="#manga-case" data-open-details="manga-case">不鸣文化</a></h3><p>AI 漫剧制作</p></div><div class="experience"><p class="experience-date">2026.01 — 2026.06</p><h3><a href="#evaluation-case" data-open-details="evaluation-case">商汤科技</a></h3><p>AI 训练师</p></div></div><div class="skills"><div><h3>视觉创作</h3><p>分镜 · 角色一致性<br>生成与剪辑</p></div><div><h3>生产流程</h3><p>ComfyUI · Python<br>批处理</p></div><div><h3>质量控制</h3><p>视频描述 · 多模态评测<br>质检</p></div></div></div><figure class="about-art" data-reveal><img src="assets/portrait-v2.webp" width="1254" height="1254" loading="lazy" alt="银灰发色与透明紫色眼镜的原创记录者肖像"></figure></div>
+    </section>
+    <section id="contact" class="contact content-section" data-chapter-section data-theme="dark" aria-labelledby="contact-heading"><div class="contact-main"><h2 id="contact-heading"><span>下一部作品，</span><br><span class="contact-invitation">一起创造<span class="lime-period">。</span></span></h2><div class="contact-actions"><div class="contact-buttons"><a class="button button-lime" href="mailto:1481538526@qq.com">邮件联系 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a><a class="button button-outline" href="assets/resume.html" target="_blank" rel="noopener">查看简历 <svg class="arrow" viewBox="0 0 24 18" aria-hidden="true"><path d="M1 9h20M13 1l8 8-8 8"/></svg></a></div><div class="contact-email-row"><a id="contact-email-address" class="contact-email" href="mailto:1481538526@qq.com">1481538526@qq.com</a><button id="contact-copy-email" data-copy-email type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5V3h12v14h-2M3 7h12v14H3z"/></svg><span>复制邮箱</span></button></div><p id="contact-copy-status" class="contact-copy-status" role="status" aria-live="polite" aria-atomic="true"></p></div></div><footer class="site-footer"><span>黄进鸿 / AIGC PORTFOLIO</span><a href="#top">回到顶部<svg viewBox="0 0 10 16" aria-hidden="true"><path d="M5 15V1M1 5l4-4 4 4"/></svg></a></footer></section>
+  </main>
+  <div id="portfolio-cursor" aria-hidden="true" data-scope-state="idle"><svg class="scope-reticle" viewBox="0 0 88 88" focusable="false"><g class="scope-scaled"><g class="scope-rotor scope-rotor-outer"><circle class="scope-outer-ring" cx="44" cy="44" r="33"/><path class="scope-major-ticks" d="M44 6v8m0 60v8M6 44h8m60 0h8M17.1 17.1l5.7 5.7m42.4 42.4 5.7 5.7M70.9 17.1l-5.7 5.7m-42.4 42.4-5.7 5.7"/><circle class="scope-fine-ticks" cx="44" cy="44" r="36"/></g><g class="scope-rotor scope-rotor-inner"><circle class="scope-inner-ring" cx="44" cy="44" r="24"/><path class="scope-accent-arcs" d="M25.6 28.6a24 24 0 0 1 12.2-7.8m25.7 37a24 24 0 0 1-12.2 7.8"/><path class="scope-inner-ticks" d="M44 17v4m0 46v4M17 44h4m46 0h4"/></g><circle class="cursor-progress" cx="44" cy="44" r="28"/></g><path class="scope-cross" d="M44 30v9m0 10v9M30 44h9m10 0h9"/><circle class="scope-center" cx="44" cy="44" r="1"/></svg><span class="cursor-label">长按查看档案</span></div>
+  <div id="hold-inspection" aria-hidden="true" hidden>
+    <div class="inspection-frame"><div class="inspection-top"><span>角色档案</span><span class="inspection-release">松开返回画面</span></div><div class="inspection-rail" aria-hidden="true"><span>归巢协议</span><i></i></div><article class="inspection-copy"><div class="inspection-heading"><p class="inspection-kicker">归巢协议 · 装甲形态</p><h2>影像<br>记录者</h2><p class="inspection-line">保存记忆，寻找归途。</p></div><div class="inspection-details"><p class="inspection-story">他穿行于未来港口，收集遗失的影像，把碎片化记忆重新拼成回家的线索。</p><dl class="inspection-features"><div><dt>光学头盔</dt><dd>紫色光学面罩、侧置传感器与分层护颈，构成记录者的视觉识别。</dd></div><div><dt>记忆记录单元</dt><dd>胸前影像装置保存旅途片段，背部储存模块延续记忆归档的设定。</dd></div><div><dt>模块化外骨骼</dt><dd>银黑装甲与织物内层包覆肩胸，连接记录设备与承重肩带。</dd></div></dl><div class="inspection-credits"><p>角色设定 · 黄进鸿</p><p>三维重建与材质 · AI 协作</p><p>背部与侧面为补充设计</p></div></div></article><div class="hold-model-panel" data-hold-model-host></div><div class="inspection-bottom"><span>原创角色 · 装甲形态</span><span>松开返回画面</span></div></div>
+  </div>
+  <dialog id="character-dialog" aria-labelledby="character-heading" aria-describedby="character-description">
+    <div class="inspection-frame character-shell"><div class="inspection-top"><span>角色档案</span><button id="character-close" aria-label="关闭角色档案" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 16 16M20 4 4 20"/></svg></button></div><div class="inspection-rail" aria-hidden="true"><span>归巢协议</span><i></i></div><article class="inspection-copy"><div class="inspection-heading"><p class="inspection-kicker">归巢协议 · 装甲形态</p><h2 id="character-heading">影像<br>记录者</h2><p id="character-description" class="inspection-line">保存记忆，寻找归途。</p></div><div class="inspection-details"><p class="inspection-story">他穿行于未来港口，收集遗失的影像，把碎片化记忆重新拼成回家的线索。</p><dl class="inspection-features"><div><dt>光学头盔</dt><dd>紫色光学面罩、侧置传感器与分层护颈，构成记录者的视觉识别。</dd></div><div><dt>记忆记录单元</dt><dd>胸前影像装置保存旅途片段，背部储存模块延续记忆归档的设定。</dd></div><div><dt>模块化外骨骼</dt><dd>银黑装甲与织物内层包覆肩胸，连接记录设备与承重肩带。</dd></div></dl><div class="inspection-credits"><p>角色设定 · 黄进鸿</p><p>三维重建与材质 · AI 协作</p><p>背部与侧面为补充设计</p></div></div></article><div id="character-model-host"><div id="character-viewport" role="img" aria-label="影像记录者的可转动科幻装甲模型"><img id="character-fallback" src="assets/portrait-v2.webp" width="1254" height="1254" alt="记录者的平面角色设定肖像"><p id="character-status" role="status" aria-live="polite">正在载入 3D 角色…</p></div></div><div class="inspection-bottom"><p class="character-help">拖动旋转 · 滚轮缩放</p><div class="character-controls"><button id="character-auto" aria-pressed="true" aria-label="暂停自动旋转">自动旋转</button><button id="character-view" aria-pressed="false">全身</button><button id="character-wireframe" aria-pressed="false">线框</button><button id="character-reset">重置</button><button id="character-download">下载模型<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v10m-4-4 4 4 4-4M2 12v3h12v-3"/></svg></button></div></div></div>
+  </dialog>
+  <noscript><p class="character-noscript">启用 JavaScript 后可长按查看角色介绍，或打开可旋转的 3D 角色档案。</p></noscript>
+</body>
+</html>

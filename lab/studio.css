@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* Shared finished-workbench shell. Existing genuine typefaces remain in use. */
+.lab-v2{--studio-paper:#fff;--studio-ink:#101114;--studio-dark:#0c0e10;--studio-muted:#737980;--studio-line:#d6d8d9;--studio-accent:#d9f870;--studio-ease:cubic-bezier(.16,1,.3,1);background:#fff;color:#101114;overflow-x:clip}
+.lab-v2 [hidden]{display:none!important}.lab-v2 .lab-header{width:100%;max-width:none;min-height:68px;padding:0 32px;margin:0;background:#fff;color:#101114;position:relative;z-index:15;flex:none}
+.lab-v2 .lab-brand{font-size:24px;gap:14px}.lab-v2 .lab-slashes{width:34px;height:24px}.lab-v2 .lab-header nav{gap:32px;font-size:14px}.lab-v2 .lab-header nav a{min-height:44px}.lab-v2 .lab-back{margin-left:24px}
+.lab-v2 .lab-button{min-height:44px;padding:10px 16px;gap:10px;line-height:1.4;font-size:14px!important;border-radius:2px;box-shadow:none;letter-spacing:0}
+.lab-v2 .lab-button.primary{background:#d9f870;border-color:#d9f870!important;color:#101114}.lab-v2 .lab-button.dark{background:#101114;color:white}.lab-v2 .lab-button:disabled{opacity:.45;cursor:not-allowed}
+.lab-v2 input:not([type=range]):not([type=file]):not([type=checkbox]),.lab-v2 select,.lab-v2 textarea{font-family:var(--font-ui);font-size:14px;min-height:42px;border-radius:2px;background:#fff;border:1px solid #d6d8d9;box-shadow:none}
+.lab-v2 input[type=checkbox]{accent-color:#101114;width:16px;height:16px}.lab-v2 input[type=range]{--range-progress:50%;accent-color:#d9f870}
+.studio-icon{width:18px;height:18px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.studio-icon-button{display:inline-grid;place-items:center;min-width:44px;min-height:44px;border:1px solid #d6d8d9!important;border-radius:2px;background:#fff}
+.studio-tabs{display:flex;border-bottom:1px solid #d6d8d9;gap:20px}.studio-tabs>button{position:relative;min-height:46px;padding:8px 12px;background:none;font-size:14px;color:#737980}.studio-tabs>button[aria-selected=true]{color:#101114}.studio-tabs>button[aria-selected=true]::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:#d9f870}
+.studio-dialog{width:min(1120px,calc(100vw - 48px));max-width:none;max-height:calc(100svh - 48px);border:1px solid #d6d8d9;border-radius:3px;padding:0;background:white;color:#101114;overflow:auto}.studio-dialog::backdrop{background:#080b10b8;backdrop-filter:blur(8px)}
+.studio-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #d6d8d9;padding:20px 24px}.studio-dialog-header h2{font-size:28px!important}.studio-dialog-header button{min-width:44px;min-height:44px;background:none}
+.studio-message{font-size:12px;line-height:1.7;color:#737980;overflow-wrap:anywhere}.studio-message[data-state=error]{color:#9d3f31}.lab-v2 :is(button,a,input,select,textarea,summary):focus-visible{outline:2px solid #101114;outline-offset:3px}.lab-v2 canvas:focus-visible{outline:2px solid #d9f870;outline-offset:-4px}
+.studio-enter{animation:studio-enter .5s var(--studio-ease) both}@keyframes studio-enter{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@media(max-width:900px){.lab-v2 .lab-header{padding-inline:20px}.lab-v2 .lab-header nav{gap:20px}.lab-v2 .lab-back{margin-left:4px}}
+@media(max-width:700px){.lab-v2 .lab-header{min-height:105px;padding:11px 18px 0;gap:3px}.lab-v2 .lab-brand{font-size:23px}.lab-v2 .lab-header nav{width:100%;gap:9px;justify-content:space-between;font-size:12px}.lab-v2 .lab-header nav a{min-height:44px}.lab-v2 .lab-back{margin-left:0}.lab-v2 input:not([type=range]),.lab-v2 select,.lab-v2 textarea{font-size:16px!important}.studio-dialog{width:calc(100vw - 20px);max-height:calc(100svh - 20px)}.studio-dialog-header{padding:14px 16px}}
+@media(max-width:359px){.lab-v2 .lab-header{padding-inline:14px}.lab-v2 .lab-header nav{font-size:11px;gap:5px}.lab-v2 .lab-brand{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.studio-enter{animation:none}.lab-v2 *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

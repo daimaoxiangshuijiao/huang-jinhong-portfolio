@@ -1,0 +1,10 @@
+/* Optical index decoding is a finite decorative layer; semantic labels stay intact. */
+#site-menu nav a > .menu-index { position:relative; min-width:2ch; font-family:Consolas,'Liberation Mono',monospace; }
+#site-menu .menu-index.is-decoding { color:transparent !important; }
+#site-menu .menu-index.is-decoding::after { content:attr(data-decode); position:absolute; inset:0; color:#a79bed; pointer-events:none; }
+#site-menu nav a[aria-current] .menu-index.is-decoding::after,
+#site-menu nav a:hover .menu-index.is-decoding::after { color:#101114; }
+@media(prefers-reduced-motion:reduce) {
+  #site-menu .menu-index.is-decoding { color:inherit !important; }
+  #site-menu .menu-index.is-decoding::after { display:none; }
+}

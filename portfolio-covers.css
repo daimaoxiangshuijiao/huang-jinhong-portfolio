@@ -1,0 +1,21 @@
+/* Real scene artwork and live-rendered sculpture assets, arranged as native covers. */
+.portfolio-director-cover{--cover-film-height:76px;position:relative;overflow:hidden;background:#111719}
+.portfolio-director-cover>.director-cover-scene{position:absolute;inset:0 0 auto;display:block;width:100%;height:calc(100% - var(--cover-film-height));object-fit:cover;object-position:50% 55%;transition:scale .65s cubic-bezier(.16,1,.3,1)}
+.director-cover-strip{position:absolute;inset:auto 0 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;height:var(--cover-film-height);padding:7px;background:#111719}
+.director-cover-strip>img{display:block;min-width:0;width:100%;height:100%;object-fit:cover;border:1px solid #ffffff20}
+.director-cover-strip>img:first-child{border-color:#d9f870}
+.portfolio-core-cover{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#050808}
+.portfolio-core-cover>img{display:block;min-width:0;width:33.333%;height:100%;object-fit:contain;transition:scale .65s cubic-bezier(.16,1,.3,1)}
+.lab-entry-media.portfolio-core-cover{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr}
+.lab-entry-media.portfolio-core-cover>img{width:100%;min-height:0;height:100%}
+.lab-entry-media.portfolio-core-cover>img:first-child{grid-row:1/-1}
+.lab-entry-feature .portfolio-director-cover{--cover-film-height:92px}
+.showcase-main .showcase-row .portfolio-core-cover>img{width:33.333%;height:100%;object-fit:contain}
+.showcase-main .showcase-row .showcase-orbit .showcase-planet{width:275px;height:275px;max-width:none}
+.showcase-main .showcase-row .showcase-orbit-line{inset:28% 11%}
+.showcase-main .showcase-copy h1{font-size:clamp(40px,4vw,60px);line-height:1.27}
+@media(max-width:1100px){.showcase-main .showcase-copy h1{font-size:46px}}
+@media(max-width:760px){.lab-entry-feature .portfolio-director-cover{--cover-film-height:58px}}
+@media(max-width:700px){.portfolio-director-cover{--cover-film-height:55px}.director-cover-strip{gap:3px;padding:5px}.showcase-main .showcase-copy h1{font-size:38px;line-height:1.3}.showcase-main .showcase-copy h1 br{display:block}.showcase-main .showcase-row .showcase-orbit .showcase-planet{width:255px;height:255px}.showcase-main .showcase-row .showcase-orbit-line{inset:29% 7%}}
+@media(max-width:359px){.showcase-main .showcase-copy h1{font-size:33px}.director-cover-strip{gap:2px;padding:4px}}
+@media(prefers-reduced-motion:reduce){.portfolio-director-cover>.director-cover-scene,.portfolio-core-cover>img{transition:none}}
